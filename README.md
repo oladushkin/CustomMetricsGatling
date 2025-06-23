@@ -5,6 +5,7 @@
 ## Начало работы.
 
 В файле inject Gatling-а настраиваем подключение:
+
 ```
 public class Stab extends Simulation {
     public static ConfigInfluxConnect conf = new ConfigInfluxConnect("url_influx", "username", "password"); // Конфиг подключения 
