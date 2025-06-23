@@ -35,6 +35,3 @@ public class Stab extends Simulation {
             return session;
         }
     )
-
-
-```
