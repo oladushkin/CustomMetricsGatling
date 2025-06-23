@@ -1,4 +1,4 @@
-package conect_close;
+package factory;
 
 import config.ConfigInfluxConnect;
 import config.ConfigInfluxPackeg;
@@ -12,9 +12,7 @@ public class InfluxFactory {
 
     public static InfluxDB connect_influx(ConfigInfluxConnect conf_connect, ConfigInfluxPackeg conf_packeg) {
         InfluxDB influxDB = InfluxDBFactory.connect(conf_connect.serverURL, conf_connect.username, conf_connect.password);
-        System.out.println("Connect DB");
         batch_recording_setup(influxDB, conf_packeg);
-        System.out.println("Пакетная запись настроена");
         return influxDB;
     }
 
